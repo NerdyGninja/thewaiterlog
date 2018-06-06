@@ -1,0 +1,29 @@
+<% if signed_in? %>
+  <h4>Add Income</h4>
+  <%= form_for([@user, @user.tips.build]) do |f| %>
+  <p>
+    <%= f.label :date "date" %>
+    <%= f.date :date %>
+  </p>
+
+  <p>
+    <%= f.label :hours "hours" %>
+    <%= f.integer :hours %>
+  </p>
+
+  <p>
+    <%= f.label :amount %>
+    <%= f.decimal :amount %>
+  </p>
+
+  <p>
+    <%= f.label :comment %>
+    <%= f.tex_area :comment %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+  <% end %>
+<% end %>
