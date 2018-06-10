@@ -1,0 +1,27 @@
+<p>
+  <strong>User:</strong>
+  <%= @tip.user %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @tip.date %>
+</p>
+
+<p>
+  <strong>Hours:</strong>
+  <%= @tip.hours %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @tip.amount %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @tip.comment %>
+</p>
+
+<%= link_to 'Edit', edit_user_tip_path(@tip) %> |
+<%= link_to 'Back', user_tips_path %>
