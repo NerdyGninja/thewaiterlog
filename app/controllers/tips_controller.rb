@@ -1,24 +1,4 @@
 class TipsController < ApplicationController
-<<<<<<< HEAD
-
-	def create
-		@user = User.find(params[:user_id])
-		@tip = @user.tips.new(tip_params)
-		@tip.user = current_user
-		@tip.save
-		redirect_to user_tip(@tip)
-	end
-
-	def destroy
-	end
-
-	private
-
-		def tip_params
-			params.require(:tip).permit(:user_id, :date, :hours, :amount, :comment)
-		end
-
-=======
   before_action :authenticate_user!
   before_action :set_tip, only: [:show, :edit, :update, :destroy]
 
@@ -96,5 +76,4 @@ class TipsController < ApplicationController
     def tip_params
       params.require(:tip).permit(:user_id, :date, :hours, :amount, :comment)
     end
->>>>>>> authorization
 end
