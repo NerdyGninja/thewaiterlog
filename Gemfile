@@ -33,7 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # CUSTOM GEMS
 gem 'jquery-rails'
-gem 'devise'
+gem 'devise' # For authentication
+gem 'cancancan', '~> 1.10' # For authorization
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

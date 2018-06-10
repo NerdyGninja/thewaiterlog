@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_05_190232) do
+ActiveRecord::Schema.define(version: 2018_06_08_061449) do
 
   create_table "tips", force: :cascade do |t|
     t.integer "user_id"
