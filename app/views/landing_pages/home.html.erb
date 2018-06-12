@@ -1,4 +1,6 @@
-<h1>LandingPages#home</h1>
-<p>Find me in app/views/landing_pages/home.html.erb</p>
+<h1>USER HOME PAGE!!!</h1>
 
-<%= link_to "New Daily Tips", new_user_tip_path(current_user) %>
+<%= link_to "ADD A DAILY TIP", new_user_tip_path(current_user) %>
+<%= link_to "ALL TIPS", user_tips_path(current_user) %>
+<%= link_to "SOME STATS", landing_pages_stats_path %>
+<%= link_to "MY WALLET", new_user_tip_path(current_user) %>

@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to landing_pages_home_url, notice: 'User was successfully created.' }
+        format.html { redirect_to landing_pages_home_url, notice: 'User Account Successfully Created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to landing_pages_home_url, notice: 'User was successfully updated.' }
+        format.html { redirect_to landing_pages_home_url, notice: 'You Have Successfully Updated Your Details.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: 'Successfully Destroyed User Account.' }
       format.json { head :no_content }
     end
   end

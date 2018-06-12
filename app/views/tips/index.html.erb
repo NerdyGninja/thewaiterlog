@@ -15,7 +15,7 @@
   <tbody>
     <% @tips.each do |tip| %>
       <tr>
-        <td><%= tip.user %></td>
+        <td><%= tip.user.first_name %></td>
         <td><%= tip.date %></td>
         <td><%= tip.hours %></td>
         <td><%= tip.amount %></td>
