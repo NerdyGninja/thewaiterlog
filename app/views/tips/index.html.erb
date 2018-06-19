@@ -18,7 +18,7 @@
         <td><%= tip.user.first_name %></td>
         <td><%= tip.date %></td>
         <td><%= tip.hours %></td>
-        <td><%= tip.amount %></td>
+        <td><%= tip.amount.round(2) %></td>
         <td><%= tip.comment %></td>
         <td><%= link_to 'Show', user_tip_path(tip.user, tip) %></td>
         <td><%= link_to 'Edit', edit_user_tip_path(tip.user, tip) %></td>
