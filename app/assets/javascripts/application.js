@@ -19,5 +19,5 @@
 
 $(document).on('turbolinks:load', function() {
 	// fades alerts
-	$('.alert, .notice').delay(4000).fadeOut(1500);
+	$('.flash-notices > p').delay(4000).fadeOut(1500);
 })

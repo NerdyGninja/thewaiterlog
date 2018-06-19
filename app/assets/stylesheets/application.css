@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+.top-buffer {
+	margin-top: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Passion One', cursive;
+}
+
+p, a, input, label {
+	font-family: 'Teko', sans-serif;
+}

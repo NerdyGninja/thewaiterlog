@@ -4,18 +4,22 @@
 <%= render 'layouts/head' %>
 
 <body>
-  <div class="container-fluid">
 
-    <%= render 'layouts/nav' %>
-    
-    <div class="flash-notices">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
+  <%= render 'layouts/nav' %>
+
+  <div class="flash-notices text-center">
+    <% if notice %>
+    <p id="notice" class="alert alert-info" role="alert"><%= notice %></p>
+    <% end %>
+
+    <%if alert %>
+    <p id="alert" class="alert alert-danger" role="alert"><%= alert %></p>
+    <% end %>
+  </div>
 
     <%= yield %>
 
-  </div>
+  </div> <!-- end container-fluid -->
 
 </body>
 </html>

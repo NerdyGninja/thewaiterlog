@@ -1,6 +1,6 @@
 <p>
   <strong>User:</strong>
-  <%= @tip.user %>
+  <%= @tip.user.first_name %>
 </p>
 
 <p>
@@ -23,5 +23,5 @@
   <%= @tip.comment %>
 </p>
 
-<%= link_to 'Edit', edit_user_tip_path(@tip) %> |
+<%= link_to 'Edit', edit_user_tip_path(@user, @tip) %> |
 <%= link_to 'Back', url_for(:back) %>
