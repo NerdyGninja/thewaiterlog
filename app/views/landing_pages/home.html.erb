@@ -1,10 +1,10 @@
-  <div class="top-buffer text-center">
-    <h1>Welcome <%= current_user.first_name %></h1>
+  <div class="text-center">
+    <h2>Hi <%= current_user.first_name %></h2>
     <h3>What would you like to do?</h3>
-    <hr>
   </div>
 
   <div class="container top-buffer">
+    <hr>
     <div class="row">
       <div class="col-sm-6 col-md-4 col-lg-3 text-center">
         <%= link_to "ADD A DAILY TIP", new_user_tip_path(current_user), class: 'btn btn-lg cmd-button' %>

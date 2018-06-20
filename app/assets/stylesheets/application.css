@@ -19,9 +19,14 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Passion One', cursive;
+	font-family: 'Neucha', cursive;
 }
 
-p, a, input, label {
-	font-family: 'Teko', sans-serif;
+p, a, input, label, textarea, select, span {
+	font-family: 'Amatic SC', cursive;
+}
+
+.card {
+	width: 11rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }

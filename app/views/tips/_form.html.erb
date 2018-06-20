@@ -1,37 +1,64 @@
+<div class="container">
+  <hr>
   <%= form_for [@user, @tip] do |f| %>
-    <% if @tip.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
+  <% if @tip.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@tip.errors.count, "error") %> prohibited this tip from being saved:</h2>
 
-        <ul>
-        <% @tip.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :date %>
-      <%= f.date_select :date %>
-    </div>
-
-    <div class="field">
-      <%= f.label :hours %>
-      <%= f.number_field :hours %>
-    </div>
-
-    <div class="field">
-      <%= f.label :amount %>
-      <%= f.text_field :amount %>
-    </div>
-
-    <div class="field">
-      <%= f.label :comment %>
-      <%= f.text_area :comment %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+    <ul>
+      <% @tip.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
   <% end %>
+
+  <div class="form-group">
+    <%= f.label :date, class: 'sr-only' %>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend" id="date-addon">
+        <span class="input-group-text far fa-calendar-alt"></span>
+      </div>
+      <%= f.date_select :date, class: 'form-control form-control-lg', 'aria-label': 'date', 'aria-described-by': 'date-addon' %>
+    </div>
+  </div>
+
+<div class="form-group">
+  <%= f.label :hours, class: 'sr-only' %>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend" id="hours-addon">
+      <span class="input-group-text far fa-clock"></span>
+    </div>
+    <%= f.number_field :hours, class: 'form-control form-control-lg', 'aria-label': 'hours', 'aria-describedby': 'hours-addon', placeholder: 'The amount of hours worked. E.g. "4"' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :amount, class: 'sr-only' %>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend" id="amount-addon">
+      <span class="input-group-text far fa-money-bill-alt"></span>
+    </div>
+    <%= f.text_field :amount, class: 'form-control form-control-lg', 'aria-label': 'amount',
+    'aria-describedby': 'amount-addon', placeholder: 'Total amount of all the tips earned today' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :comment, class: 'sr-only' %>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend" id="comment-addon">
+      <span class="input-group-text far fa-edit"></span>
+    </div>
+    <%= f.text_area :comment, class: 'form-control form-control-lg', 'aria-label': 'comment', 'aria-described-by': 'comment-addon', 
+    placeholder: 'Any additional info you\'d like to add.
+E.g. "Today was not good. Due to a bomb threat the store had to close early"' %>
+  </div>
+</div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
+<hr>
+</div>
