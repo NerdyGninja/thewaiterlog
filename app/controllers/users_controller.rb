@@ -58,7 +58,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'Successfully Destroyed User Account.' }
+      format.html { redirect_to root_url, notice: 'Successfully Destroyed User Account.' }
       format.json { head :no_content }
     end
   end
